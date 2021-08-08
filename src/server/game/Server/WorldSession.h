@@ -1045,6 +1045,7 @@ class WorldSession
         void HandleWorldStateUITimerUpdate(WorldPacket& recvData);
         void HandleReadyForAccountDataTimes(WorldPacket& recvData);
         void HandleQueryQuestsCompleted(WorldPacket& recvData);
+        void HandleQuestNPCQuery(WorldPacket& recvData);
         void HandleQuestPOIQuery(WorldPacket& recvData);
         void HandleEjectPassenger(WorldPacket& data);
         void HandleRideVehicleInteract(WorldPacket& recvData);

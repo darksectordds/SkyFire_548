@@ -1039,3 +1039,15 @@ void WorldSession::HandleQueryQuestsCompleted(WorldPacket& /*recvData*/)
 
     SendPacket(&data);
 }
+
+void WorldSession::HandleQuestNPCQuery(WorldPacket& recvData)
+{
+    uint32 questId;
+    recvData >> questId; // recvData has only questId ??
+    printf("Quest: %d ", questId);
+
+    if (_player->GetQuestStatus(questId) == QUEST_STATUS_COMPLETE)
+    {
+        printf("is complete!\n");
+    } else printf("is NOT complete!\n");
+}
